@@ -4,7 +4,7 @@
   <img src="docs/images/top-stories-gpt-logo.png" alt="Top Stories GPT - Professional AI Content Generation" width="400"/>
 </div>
 
-Your automated content ninja. Transform RSS feeds into polished, WSJ-style articles that executives actually want to read. Pick your topic, get fresh insights, and publish with style – all in minutes, not hours.
+Your automated content ninja. Transform RSS feeds into polished, executive-style articles that drive decisions. Pick your topic, get fresh insights, and publish with authority – all in minutes, not hours.
 
 ## Overview
 
@@ -13,8 +13,8 @@ Top Stories GPT streamlines content creation by turning industry news into sharp
 ## Key Features
 
 - **Fast & Fresh**: From RSS to polished article in minutes
-- **Executive Edge**: Every piece crafted in WSJ/FT style
-- **Smart Automation**: RSS monitoring to Webflow publishing, hands-free
+- **Executive Edge**: Clear, authoritative business writing
+- **Smart Automation**: RSS monitoring to publishing, hands-free
 - **Quality Control**: Built-in tone and fact-checking
 - **Instant Publishing**: Direct to your CMS, no manual work needed
 
@@ -32,7 +32,7 @@ The `/examples` directory contains sample articles demonstrating:
 - Professional tone and structure
 - Strategic content framing
 - Executive-focused insights
-- WSJ/FT-style formatting
+- Executive-style formatting
 
 ## Getting Started
 

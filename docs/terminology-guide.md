@@ -1,12 +1,12 @@
 # Terminology Guide
 
 ## Overview
-This guide outlines the terminology variation system used by Top Stories GPT to maintain professional, C-suite executive tone while ensuring content diversity.
+This guide outlines the terminology variation system used by Top Stories GPT to maintain a professional, C-suite executive tone while ensuring content diversity.
 
 ## Core Principles
-- Use WSJ/FT-inspired business terminology
-- Maintain 90s business leadership tone
-- Prioritize fact-driven language
+- Clear, authoritative business writing
+- Classic 90s business leadership tone
+- Fact-driven language
 - Avoid repetitive phrasing
 
 ## Term Categories
@@ -126,7 +126,7 @@ This guide outlines the terminology variation system used by Top Stories GPT to 
 - Ensure proper term combinations
 
 ### Style Verification
-- WSJ/FT alignment
+- Clear, authoritative business writing
 - Executive accessibility
 - Technical accuracy
 
