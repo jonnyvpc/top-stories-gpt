@@ -10,6 +10,51 @@ Your automated content ninja. Transform RSS feeds into polished, executive-style
 
 Top Stories GPT streamlines content creation by turning industry news into sharp, executive-ready articles. It combines GPT technology with automated workflows to deliver professional content that cuts through the noise.
 
+## System Architecture
+
+```mermaid
+graph TB
+    subgraph Input ["Content Sources"]
+        RSS[RSS Feeds]
+        API[External APIs]
+        Web[Web Content]
+    end
+
+    subgraph Processing ["AI Processing Layer"]
+        GPT[Top Stories GPT]
+        style GPT fill:#2ecc71,stroke:#27ae60,stroke-width:2px
+        Analysis[Content Analysis]
+        Style[Style Enhancement]
+    end
+
+    subgraph Automation ["Automation Layer"]
+        Make[Make.com Workflow]
+        style Make fill:#3498db,stroke:#2980b9,stroke-width:2px
+        Monitor[Performance Monitor]
+        Queue[Content Queue]
+    end
+
+    subgraph Output ["Distribution"]
+        CMS[Webflow CMS]
+        style CMS fill:#e74c3c,stroke:#c0392b,stroke-width:2px
+        Publish[Auto Publishing]
+    end
+
+    RSS --> GPT
+    API --> GPT
+    Web --> GPT
+    GPT --> Analysis
+    Analysis --> Style
+    Style --> Make
+    Make --> Monitor
+    Make --> Queue
+    Queue --> CMS
+    CMS --> Publish
+
+    classDef default fill:#f9f9f9,stroke:#666,stroke-width:1px
+    classDef highlight fill:#fff,stroke:#333,stroke-width:2px
+```
+
 ## Key Features
 
 - **Fast & Fresh**: From RSS to polished article in minutes
