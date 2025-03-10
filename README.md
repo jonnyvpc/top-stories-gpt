@@ -4,19 +4,19 @@
   <img src="docs/images/top-stories-gpt-logo.png" alt="Top Stories GPT - Professional AI Content Generation" width="400"/>
 </div>
 
-A sophisticated content generation system that produces WSJ/FT-style executive articles using advanced AI technology.
+Your automated content ninja. Transform RSS feeds into polished, WSJ-style articles that executives actually want to read. Pick your topic, get fresh insights, and publish with style – all in minutes, not hours.
 
 ## Overview
 
-Top Stories GPT combines custom GPT models, Make.com automation, and Webflow CMS to generate high-quality, executive-focused content with professional tone and strategic insights.
+Top Stories GPT streamlines content creation by turning industry news into sharp, executive-ready articles. It combines GPT technology with automated workflows to deliver professional content that cuts through the noise.
 
 ## Key Features
 
-- **WSJ/FT-Inspired Content**: Professional articles following elite business publication standards
-- **Executive Focus**: C-suite oriented content with strategic insights
-- **Automated Pipeline**: Seamless content generation and distribution workflow
-- **Performance Monitoring**: Real-time metrics and webhook optimization
-- **Quality Control**: Comprehensive validation and professional tone verification
+- **Fast & Fresh**: From RSS to polished article in minutes
+- **Executive Edge**: Every piece crafted in WSJ/FT style
+- **Smart Automation**: RSS monitoring to Webflow publishing, hands-free
+- **Quality Control**: Built-in tone and fact-checking
+- **Instant Publishing**: Direct to your CMS, no manual work needed
 
 ## Documentation
 
