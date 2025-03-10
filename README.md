@@ -1,7 +1,7 @@
 # Top Stories GPT
 
 <div align="center">
-  <img src="./docs/images/top stories agent.png" alt="Top Stories GPT - Professional AI Content Generation" width="400"/>
+  <img src="./docs/images/top%20stories%20agent.png" alt="Top Stories GPT - Professional AI Content Generation" width="400"/>
 </div>
 
 Your automated content ninja. Transform RSS feeds into polished, executive-style articles that drive decisions. Pick your topic, get fresh insights, and publish with authority – all in minutes, not hours.
