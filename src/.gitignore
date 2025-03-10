@@ -1,0 +1,74 @@
+# Environment variables and secrets
+.env
+*.env
+.env.*
+!.env.example
+
+# API keys and credentials
+*.pem
+*.key
+*.cert
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+*.bak
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+
+# Dependencies
+node_modules/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Build outputs
+dist/
+build/
+*.pyc
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Test coverage
+coverage/
+.coverage
+htmlcov/
+
+# Make.com workflow backups
+*.backup.json
+
+# Webflow temporary files
+.webflow-config.json
+
+# Local development files
+local/
+dev/
+*.local
+*.dev
+
+# Documentation drafts
+docs/_drafts/
+*.draft.md
+
+# Media and large files
+*.mp4
+*.mov
+*.avi
+*.wmv
+*.zip
+*.tar.gz
+*.rar

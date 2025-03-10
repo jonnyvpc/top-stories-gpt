@@ -1,0 +1,126 @@
+{
+  "name": "Top Stories GPT Content Pipeline",
+  "flow_steps": [
+    {
+      "type": "webhook",
+      "name": "RSS Feed Monitor",
+      "config": {
+        "method": "GET",
+        "url": "{{cfg.RSS_FEED_URL}}",
+        "headers": {
+          "Accept": "application/xml"
+        },
+        "schedule": "*/15 * * * *"
+      }
+    },
+    {
+      "type": "parser",
+      "name": "Extract Articles",
+      "config": {
+        "format": "xml",
+        "items_path": "rss.channel.item",
+        "fields": [
+          "title",
+          "description",
+          "link",
+          "pubDate",
+          "category",
+          "media:content"
+        ]
+      }
+    },
+    {
+      "type": "filter",
+      "name": "AI/Tech Filter",
+      "config": {
+        "conditions": [
+          {
+            "field": "category",
+            "operator": "contains",
+            "value": ["AI", "Technology", "Digital", "Innovation", "Business Technology", "Enterprise Tech"]
+          }
+        ]
+      }
+    },
+    {
+      "type": "api",
+      "name": "GPT Processing",
+      "config": {
+        "url": "{{cfg.GPT_API_ENDPOINT}}",
+        "method": "POST",
+        "headers": {
+          "Authorization": "Bearer {{cfg.GPT_API_KEY}}",
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "source_article": "{{1.link}}",
+          "source_title": "{{1.title}}",
+          "source_summary": "{{1.description}}",
+          "source_image": "{{1.media:content.url}}",
+          "style": "wsj_ft",
+          "tone": "executive"
+        }
+      }
+    },
+    {
+      "type": "transformer",
+      "name": "Format Response",
+      "config": {
+        "mapping": {
+          "name": "{{4.title}}",
+          "slug": "{{4.title | slugify}}",
+          "exclusive-onoff": false,
+          "attention-grabber": "{{4.category | uppercase}}",
+          "attention-title": "{{4.subtitle}}",
+          "post-summary": "{{4.summary}}",
+          "post-body": "{{4.body_part_1}}",
+          "post-body-2": "{{4.body_part_2}}",
+          "post-body-3": "{{4.body_part_3}}",
+          "main-image": {
+            "url": "{{4.main_image_url}}",
+            "alt": "{{4.image_alt}}"
+          },
+          "thumbnail-image": {
+            "url": "{{4.thumbnail_url}}",
+            "alt": "{{4.image_alt}}"
+          }
+        }
+      }
+    },
+    {
+      "type": "api",
+      "name": "Webflow Publisher",
+      "config": {
+        "url": "{{cfg.WEBFLOW_API_ENDPOINT}}/collections/{{cfg.COLLECTION_ID}}/items",
+        "method": "POST",
+        "headers": {
+          "Authorization": "Bearer {{cfg.WEBFLOW_API_KEY}}",
+          "accept-version": "1.0.0",
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "fields": "{{5}}",
+          "workflowState": "published"
+        }
+      }
+    }
+  ],
+  "error_handling": {
+    "retry": {
+      "attempts": 3,
+      "delay": 300,
+      "backoff": "exponential"
+    },
+    "notification": {
+      "email": "{{cfg.ADMIN_EMAIL}}",
+      "threshold": "error"
+    }
+  },
+  "settings": {
+    "timezone": "America/New_York",
+    "memory": {
+      "cache_ttl": 3600,
+      "max_items": 1000
+    }
+  }
+}

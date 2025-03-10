@@ -1,0 +1,110 @@
+{
+  "collection": {
+    "name": "news_posts",
+    "displayName": "News Posts",
+    "singularName": "News Post",
+    "fields": [
+      {
+        "name": "name",
+        "type": "PlainText",
+        "required": true,
+        "helpText": "Main article title"
+      },
+      {
+        "name": "slug",
+        "type": "PlainText",
+        "required": true,
+        "helpText": "URL-friendly version of the title"
+      },
+      {
+        "name": "exclusive-onoff",
+        "type": "Switch",
+        "required": false,
+        "helpText": "Switch this on when the story is exclusive"
+      },
+      {
+        "name": "attention-grabber",
+        "type": "PlainText",
+        "required": true,
+        "helpText": "Hook text displayed above the title"
+      },
+      {
+        "name": "attention-title",
+        "type": "PlainText",
+        "required": false,
+        "helpText": "Secondary attention-grabbing headline"
+      },
+      {
+        "name": "post-summary",
+        "type": "RichText",
+        "required": true,
+        "helpText": "A summary of the blog post that appears in blog post grid"
+      },
+      {
+        "name": "ad-embed",
+        "type": "RichText",
+        "required": false,
+        "helpText": "Place ad code here"
+      },
+      {
+        "name": "post-body",
+        "type": "RichText",
+        "required": true,
+        "helpText": "Main article content"
+      },
+      {
+        "name": "main-image",
+        "type": "Image",
+        "required": true,
+        "helpText": "Primary article image (16:9)"
+      },
+      {
+        "name": "thumbnail-image",
+        "type": "Image",
+        "required": true,
+        "helpText": "Smaller version of main image that is used on blog post grid"
+      },
+      {
+        "name": "post-body-2",
+        "type": "RichText",
+        "required": false,
+        "helpText": "Second section of article content"
+      },
+      {
+        "name": "inline-gallery",
+        "type": "MultiImage",
+        "required": false,
+        "helpText": "Additional article images"
+      },
+      {
+        "name": "featured",
+        "type": "Switch",
+        "required": false,
+        "helpText": "Feature this post"
+      },
+      {
+        "name": "order",
+        "type": "Number",
+        "required": false,
+        "helpText": "Custom sort order (lower numbers appear first)"
+      },
+      {
+        "name": "post-body-3",
+        "type": "RichText",
+        "required": false,
+        "helpText": "Third section of article content"
+      }
+    ],
+    "settings": {
+      "slug": {
+        "template": "{{name}}",
+        "type": "auto"
+      },
+      "permalink": "/news/post/{{slug}}",
+      "seo": {
+        "title": "{{attention-grabber}} | {{name}}",
+        "description": "{{post-summary}}"
+      }
+    }
+  }
+}
